@@ -1452,6 +1452,8 @@ SECTION "Sound Stack", WRAMX
 
 wSoundEngineBackup:: ds wChannelsEnd - wMusic
 wBackupMapMusic:: db
+wSoundEngineBattleBackup:: ds wChannelsEnd - wMusic
+wBattleBackupMapMusic:: db
 
 
 SECTION "Music Player RAM", WRAMX
