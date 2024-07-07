@@ -6684,15 +6684,15 @@ GiveExperiencePoints:
 ;	predef FlagPredef
 	call LoadTileMapToTempTileMap
 	farcall EvolveDuringBattle
-	call SafeLoadTempTileMapToTileMap
+	call UpdatePlayerHPPal
 	call _LoadBattleFontsHPBar
 	call GetMonBackpic
+	call LoadTempTileMapToTileMap
 	ld a, $31
 	ldh [hGraphicStartTile], a
 	hlcoord 2, 6
 	lb bc, 6, 6
 	predef PlaceGraphic
-	call ApplyTilemapInVBlank
 
 	pop af
 	ld [wCurPartyLevel], a
