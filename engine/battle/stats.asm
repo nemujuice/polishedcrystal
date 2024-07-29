@@ -106,6 +106,8 @@ FarChangeStat:
 	jr z, .ability_check
 	cp KEEN_EYE
 	ld c, ACCURACY
+	jr z, .ability_check
+	cp MINDS_EYE
 	jr nz, .check_item
 .ability_check
 	ld a, [wChangedStat]
